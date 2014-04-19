@@ -1,0 +1,1 @@
+Placeholder directory for bower to install libraries.
