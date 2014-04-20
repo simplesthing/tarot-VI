@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "grunt": "~0.4.4",
-    "load-grunt-config": "~0.8.0"
+    "load-grunt-config": "~0.8.0",
+    "grunt-contrib-concat": "~0.4.0"
   },
   "scripts": {
     "test": "grunt"
