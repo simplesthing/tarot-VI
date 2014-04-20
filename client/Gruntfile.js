@@ -28,7 +28,7 @@ module.exports = function (grunt){
 
 	// Default Task
   // ------------------
-	grunt.registerTask('default', "", ['build']);
+	grunt.registerTask('default', "Build the app", ['build']);
 
 	grunt.initConfig(config);
 };

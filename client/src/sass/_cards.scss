@@ -1,0 +1,118 @@
+//Tarot cards module
+
+// Import custom extends and mixins
+// -----------------------------------------------------------------------
+@import 'cards/mixins';
+
+// Your styles
+// -----------------------------------------------------------------------
+.card_display_wrapper {
+	width: 100%;
+	div {
+		display:inline-block;
+		margin:2px auto;
+	}
+}
+
+
+
+
+//DEALER
+.deck { @include cards("deck.gif"); }
+
+//TRUMP CARDS
+.fool { @include cards("trump/fool.gif"); }
+.magus { @include cards("trump/magus.gif"); }
+.priestess { @include cards("trump/priestess.gif"); }
+.empress { @include cards("trump/empress.gif"); }
+.emperor { @include cards("trump/emperor.gif"); }
+.hierophant { @include cards("trump/hierophant.gif"); }
+.lovers { @include cards("trump/lovers.gif"); }
+.chariot { @include cards("trump/chariot.gif"); }
+.strength { @include cards("trump/strength.gif"); }
+.hermit { @include cards("trump/hermit.gif"); }
+.wheel { @include cards("trump/wheel.gif"); }
+.justice { @include cards("trump/justice.gif"); }
+.hanged_man { @include cards("trump/hanged_man.gif"); }
+.death { @include cards("trump/death.gif"); }
+.temperance { @include cards("trump/temperance.gif"); }
+.devil { @include cards("trump/devil.gif"); }
+.tower { @include cards("trump/tower.gif"); }
+.star { @include cards("trump/star.gif"); }
+.moon { @include cards("trump/moon.gif"); }
+.sun { @include cards("trump/sun.gif"); }
+.judgement { @include cards("trump/judgement.gif"); }
+.universe { @include cards("trump/universe.gif"); }
+
+//WAND CARDS
+.wands {
+	.one { @include cards("wands/1.gif"); }
+	.two { @include cards("wands/2.gif"); }
+	.three { @include cards("wands/3.gif"); }
+	.four { @include cards("wands/4.gif"); }
+	.five { @include cards("wands/5.gif"); }
+	.six { @include cards("wands/6.gif"); }
+	.seven { @include cards("wands/7.gif"); }
+	.eight { @include cards("wands/8.gif"); }
+	.nine { @include cards("wands/9.gif"); }
+	.ten { @include cards("wands/10.gif"); }
+	.page { @include cards("wands/page.gif"); }
+	.knight { @include cards("wands/knight.gif"); }
+	.queen { @include cards("wands/queen.gif"); }
+	.king { @include cards("wands/king.gif"); }
+}
+
+//SWORD CARDS
+.swords {
+	.one { @include cards("swords/1.gif"); }
+	.two { @include cards("swords/2.gif"); }
+	.three { @include cards("swords/3.gif"); }
+	.four { @include cards("swords/4.gif"); }
+	.five { @include cards("swords/5.gif"); }
+	.six { @include cards("swords/6.gif"); }
+	.seven { @include cards("swords/7.gif"); }
+	.eight { @include cards("swords/8.gif"); }
+	.nine { @include cards("swords/9.gif"); }
+	.ten { @include cards("swords/10.gif"); }
+	.page { @include cards("swords/page.gif"); }
+	.knight { @include cards("swords/knight.gif"); }
+	.queen { @include cards("swords/queen.gif"); }	
+}
+
+
+//CUP CARDS
+.cups {
+	.one { @include cards("cups/1.gif"); }
+	.two { @include cards("cups/2.gif"); }
+	.three { @include cards("cups/3.gif"); }
+	.four { @include cards("cups/4.gif"); }
+	.five { @include cards("cups/5.gif"); }
+	.six { @include cards("cups/6.gif"); }
+	.seven { @include cards("cups/7.gif"); }
+	.eight { @include cards("cups/8.gif"); }
+	.nine { @include cards("cups/9.gif"); }
+	.ten { @include cards("cups/10.gif"); }
+	.page { @include cards("cups/page.gif"); }
+	.knight { @include cards("cups/knight.gif"); }
+	.queen { @include cards("cups/queen.gif"); }
+	.king { @include cards("cups/king.gif"); }
+}
+
+//COIN CARDS
+	.coins {
+	.one { @include cards("coins/1.gif"); }
+	.two { @include cards("coins/2.gif"); }
+	.three { @include cards("coins/3.gif"); }
+	.four { @include cards("coins/4.gif"); }
+	.five { @include cards("coins/5.gif"); }
+	.six { @include cards("coins/6.gif"); }
+	.seven { @include cards("coins/7.gif"); }
+	.eight { @include cards("coins/8.gif"); }
+	.nine { @include cards("coins/9.gif"); }
+	.ten { @include cards("coins/10.gif"); }
+	.page { @include cards("coins/page.gif"); }
+	.knight { @include cards("coins/knight.gif"); }
+	.queen { @include cards("coins/queen.gif"); }
+	.king { @include cards("wands/king.gif"); }	
+}
+

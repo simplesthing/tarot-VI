@@ -23,8 +23,8 @@ module.exports = {
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
     html: [ 'src/index.html' ],
-    css: ['src/css/*.css']
-    // sass: 'src/sass/main.scss'
+    css: ['src/css/*.css'],
+    sass: 'src/sass/main.scss'
   },
     /**
    * This is the same as `app_files`, except it contains patterns that

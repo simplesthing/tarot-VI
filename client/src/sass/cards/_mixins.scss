@@ -1,0 +1,12 @@
+$img_dir:"images/tarot";
+
+@mixin cards($filename:"") {
+	background:#000 url(unquote($img_dir)/unquote($filename)) no-repeat;
+	border:solid 1px #000;
+	display:inline-block;
+	img {
+		width:100%;
+		height:100%;
+	}
+}
+
