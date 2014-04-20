@@ -25,10 +25,20 @@ module.exports = function (grunt){
 	grunt.task.loadTasks('tasks'); // Loads tasks in `tasks/` folder
 
 	config.env = process.env;
+  
+  grunt.initConfig(config);
+
+  /**
+  * In order to make it safe to just compile or copy *only* what was changed,
+  * we need to ensure we are starting from a clean, fresh build. So we rename
+  * the `watch` task to `delta` and then add a new task called `watch` that 
+  * does a clean buid before watching for changes.
+  */
+  grunt.renameTask( 'watch', 'delta' );
+  grunt.registerTask('watch', ['build','delta']);
 
 	// Default Task
   // ------------------
 	grunt.registerTask('default', "Build the app", ['build']);
 
-	grunt.initConfig(config);
 };
