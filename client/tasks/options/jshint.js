@@ -12,7 +12,6 @@ module.exports = {
 	    immed: true,
 	    newcap: true,
 	    noarg: true,
-	    unused: true,
 	    // Relaxing opttions make jshint product less warnings
 	    eqnull: true,
 	    sub: true,
