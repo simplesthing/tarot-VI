@@ -3,9 +3,9 @@ tarot-VI
 
 The purpose of this project is to build the tarot app without scaffolding in order to learn. 
 
-The client portion of the app is modeled after ngBolierplate, to include Grunt task runner, Bower front end package manager and E2E testing. Differences in build are application structure to include both server and client code base in one git repo, use of SASS over LESS and protractor over karma. 
+The client portion of the app is modeled after ngBolierplate, to include Grunt task runner, Bower front end package manager and E2E testing. Differences are application structure to include both server and client code base in one git repo, use of SASS over LESS and protractor over karma.
 
-The server portion of the app has not yet been defined except for the use of node and to include a testing framework.
+The server portion of the app is the API for the client. It will be using node with a NoSQL data store.
 
 ## Quick Start
 

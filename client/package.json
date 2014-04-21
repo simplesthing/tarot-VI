@@ -16,7 +16,9 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-html2js": "~0.2.4",
     "grunt-sass": "~0.12.1",
-    "load-grunt-config": "~0.8.0"
+    "load-grunt-config": "~0.8.0",
+    "grunt-protractor-runner": "~0.2.4",
+    "protractor": "~0.21.0"
   },
   "scripts": {
     "test": "grunt"
