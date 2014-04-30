@@ -14,7 +14,6 @@ module.exports = {
           '<%= html2js.app.dest %>',
           '<%= vendor_files.css %>',
           '<%= build_dir %>/assets/main.css'
-          // '<%= sass.build.dest %>'
         ]
 	},
   /**
@@ -24,10 +23,9 @@ module.exports = {
 	compile: {
 		dir: '<%= compile_dir %>',
         src: [
-          // '<%= concat.compile_js.dest %>',
+          '<%= concat.compile_js.dest %>',
           '<%= vendor_files.css %>',
           '<%= compile_dir %>/assets/main.css'
-          // '<%= recess.compile.dest %>'
         ]
 	}
 }

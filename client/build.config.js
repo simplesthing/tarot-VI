@@ -6,6 +6,8 @@ module.exports = {
 	*/
 	build_dir: 'build',
 	compile_dir: 'bin',
+  module_prefix: 'module.prefix',
+  module_suffix: 'module.suffix',
 	 /**
    * This is a collection of file patterns that refer to our app code (the
    * stuff in `src/`). These file paths are used in the configuration of

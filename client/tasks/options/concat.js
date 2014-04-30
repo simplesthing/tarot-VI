@@ -20,11 +20,11 @@ module.exports = {
 		},
 		src: [ 
 		  '<%= vendor_files.js %>', 
-		  'module.prefix', 
+		  '../../module.prefix', 
 		  '<%= build_dir %>/src/**/*.js', 
 		  '<%= html2js.app.dest %>', 
 		  '<%= html2js.common.dest %>', 
-		  'module.suffix' 
+		  '../../module.suffix' 
 		],
 		dest: '<%= compile_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.js'
 	}
