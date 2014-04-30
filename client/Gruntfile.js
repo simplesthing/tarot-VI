@@ -53,7 +53,4 @@ module.exports = function (grunt){
   // ------------------
 	grunt.registerTask('default', "Build the app", ['build', 'compile']);
 
-
-
-
 };
