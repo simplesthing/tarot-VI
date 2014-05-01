@@ -6,8 +6,6 @@ module.exports = {
 	*/
 	build_dir: 'build',
 	compile_dir: 'bin',
-  module_prefix: 'module.prefix',
-  module_suffix: 'module.suffix',
 	 /**
    * This is a collection of file patterns that refer to our app code (the
    * stuff in `src/`). These file paths are used in the configuration of
@@ -28,7 +26,15 @@ module.exports = {
     sass: 'src/sass/main.scss',
     src: 'src'
   },
-    /**
+  /**
+  * This is a collection of files used during testing only.
+  */
+  test_files: {
+    js: [
+      'vendor/angular-mocks/angular-mocks.js'
+    ]
+  },
+  /**
    * This is the same as `app_files`, except it contains patterns that
    * reference vendor code (`vendor/`) that we need to place into the build
    * process somewhere. While the `app_files` property ensures all
