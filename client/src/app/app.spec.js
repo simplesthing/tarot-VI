@@ -1,17 +1,17 @@
 describe( 'AppController', function() {
-	describe('isCurrentUrl', function (){
-		var AppController, $location, $scope;
+  describe( 'isCurrentUrl', function() {
+    var AppController, $location, $scope;
 
-		beforeEach( module('tarot'));
+    beforeEach( module( 'tarot' ) );
 
-		beforeEach( inject(function ($controller, _$location_, $rootScope) {
-			$location = $_location_;
-			$scope = $rootScope.$new();
-			AppController = $controller('AppController', {$location: $location, $scope: $scope});
-		}));
+    beforeEach( inject( function( $controller, _$location_, $rootScope ) {
+      $location = _$location_;
+      $scope = $rootScope.$new();
+      AppController = $controller( 'AppController', { $location: $location, $scope: $scope });
+    }));
 
-		it('should pass a dummy test', inject( function (){
-			expect(AppController).toBeTruthy();
-		}));
-	});
+    it( 'should pass a dummy test', inject( function() {
+      expect( AppController ).toBeTruthy();
+    }));
+  });
 });
