@@ -14,8 +14,9 @@ Install Node.js and then:
 ```sh
 $ git clone https://github.com/simplesthing/tarot-VI.git
 $ cd tarot-VI
-$ sudo npm -g install grunt-cli bower
+$ sudo npm -g install grunt-cli bower protractor
 $ npm install
 $ bower install
+$ webdriver-manager update
 $ grunt watch
 ```

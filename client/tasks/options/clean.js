@@ -1,6 +1,11 @@
 module.exports = {
-	clean: [
-		'<%= build_dir %>', 
-      	'<%= compile_dir %>'
-	]
+	clean: {
+		build: ['<%= build_dir %>'],
+      	release: ['<%= compile_dir %>'],
+		dist: {
+			options: {
+				force: true
+			}
+		}
+	}
 }

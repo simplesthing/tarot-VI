@@ -45,5 +45,31 @@ module.exports = {
 		  '<%= app_files.ctpl %>'
 		],
 		tasks: [ 'html2js' ]
-	}
+	},
+	 /**
+       * When a JavaScript unit test file changes, we only want to lint it and
+       * run the unit tests. We don't want to do any live reloading.
+       */
+      jsunit: {
+        files: [
+          '<%= app_files.jsunit %>'
+        ],
+        tasks: [ 'jshint:test', 'karma:unit:run' ],
+        options: {
+          livereload: false
+        }
+      },
+      /**
+       * When a JavaScript e2e test file changes, we only want to lint it and
+       * run the unit tests. We don't want to do any live reloading.
+       */
+      jse2e: {
+        files: [
+          '<%= app_files.jse2e %>'
+        ],
+        tasks: [ 'jshint:test', 'karma:unit:run' ],
+        options: {
+          livereload: false
+        }
+      }
 }

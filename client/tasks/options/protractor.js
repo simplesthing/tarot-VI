@@ -1,10 +1,7 @@
 module.exports = {
 	options: {
 		keepAlive: true,
-		configFile: "protractor.conf.js",
-		args: {
-			baseUrl: 'http://127.0.0.1:9000/'
-		}
+		configFile: "protractor/protractor-scenario.tpl.js",
 	},
-  	run: {}
+  	e2eTests: {}
 }
