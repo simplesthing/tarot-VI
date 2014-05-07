@@ -5,7 +5,7 @@ module.exports = {
 	* completely built.
 	*/
 	build_dir: 'build',
-	compile_dir: './../server/bin',
+	compile_dir: '/../server/public',
 	 /**
    * This is a collection of file patterns that refer to our app code (the
    * stuff in `src/`). These file paths are used in the configuration of
@@ -16,7 +16,7 @@ module.exports = {
    * app's unit tests.
    */
    app_files: {
-    js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
+    js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/**/*.scenario.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
     jse2e: ['src/**/*.scenario.js'],
     
