@@ -5,7 +5,7 @@ module.exports = {
 	* completely built.
 	*/
 	build_dir: 'build',
-	compile_dir: '/../server/public',
+	compile_dir: './../server/public',
 	 /**
    * This is a collection of file patterns that refer to our app code (the
    * stuff in `src/`). These file paths are used in the configuration of
