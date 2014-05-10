@@ -3,24 +3,29 @@ var express = require('express'),
 	api = require('./routes/api'),
 	http = require('http'),
 	path = require('path'),
+	favicon = require('static-favicon'),
+	logger = require('morgan'),
+	cookieParser = require('cookie-parser'),
+	bodyParser = require('body-parser'),
+	errorHandler = require('errorHandler'),
 	fs = require('fs'),
 	app = express(),
 	config = require('./config.json') [app.get('env')];
 
 app.set('port', process.env.PORT || 3000);
-app.use(express.favicon());
-app.use(express.logger({
+app.use(favicon());
+app.use(logger({
 	format: 'tiny',
 	stream: fs.createWriteStream('app.log', {'flags': 'w'})
 }));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
 
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+
+var env = process.env.NODE_ENV || 'development';
+if ('development' == env) {
+	app.use(errorHandler())
 }
 
 app.get('/', routes.index);
@@ -28,8 +33,8 @@ app.get('/api', api.root);
 
 app.use(function (req,res){
 	res.status(400);
-	fs.readFile('./public/404.html', function (err, content){
-		res.send(content.toString());
+	res.json({
+		"message": "Resource Not Found"
 	});
 });
 

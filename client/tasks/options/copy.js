@@ -1,14 +1,4 @@
 module.exports = {
-	build_404: {
-		files: [
-		  {
-			src: [ '404.html' ],
-	        dest: '<%= build_dir %>/',
-	        cwd: 'src/',
-	        expand: true
-		  }
-		]
-	},
 	build_app_assets: {
 		files: [
 	      { 
@@ -57,16 +47,6 @@ module.exports = {
 		    dest: '<%= compile_dir %>/assets',
 		    cwd: '<%= build_dir %>/assets',
 		    expand: true
-		  }
-		]
-	},
-	compile_404: {
-		files: [
-		  {
-		    src: [ '404.html' ],
-	        dest: '<%= compile_dir %>/',
-	        cwd: '<%= build_dir %>',
-	        expand: true
 		  }
 		]
 	}
