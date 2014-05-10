@@ -4,6 +4,7 @@ module.exports = function (grunt){
 	* minifying your code.
 	*/
 	grunt.registerTask('compile', [
+		'copy:compile_404',
 		'copy:compile_assets', 
 		'ngAnnotate',
 		'concat:compile_js', 

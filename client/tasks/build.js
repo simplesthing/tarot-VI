@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 		'jshint', 
 		'sass',
 		'concat:build_css',
+		'copy:build_404',
 		'copy:build_app_assets', 
 		'copy:build_vendor_assets',
 		'copy:build_appjs', 
