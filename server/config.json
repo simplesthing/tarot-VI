@@ -1,8 +1,7 @@
 {
 	"development": {
-		"db_host": "localhost",
-		"db_user": "root",
-		"db_pass": "root"
+		"db_host": "localhost:27017",
+		"db_name": "tarotVI"
 	},
 	"production": {
 		"db_host": "",
