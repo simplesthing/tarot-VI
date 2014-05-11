@@ -1,6 +1,6 @@
 var express = require('express'),
-	routes = require('./routes'),
-	api = require('./routes/api'),
+	app = express(),
+	config = require('./config.json') [app.get('env')],
 	http = require('http'),
 	path = require('path'),
 	favicon = require('static-favicon'),
@@ -9,9 +9,8 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	errorHandler = require('errorHandler'),
 	fs = require('fs'),
-	app = express(),
-	config = require('./config.json') [app.get('env')],
-	mongo = require('mongodb');
+	routes = require('./routes'),
+	api = require('./routes/api');
 
 app.set('port', process.env.PORT || 3000);
 app.use(favicon());
@@ -43,6 +42,7 @@ if ('development' == env) {
 app.get('/', routes.index);
 app.get('/api', api.root);
 app.get('/api/cards', api.getAllCards);
+app.get('/api/card/:index/:property?', api.getCard);
 
 
 app.use(function (req,res){

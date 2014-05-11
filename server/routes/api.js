@@ -15,3 +15,18 @@ exports.getAllCards = function (req, res){
 		else res.json(cards);
 	});
 };
+
+exports.getCard = function (req, res){
+	if(req.params.property) {
+		cards.find({"index": req.params.index}, req.params.property, function (err, card){
+			if(err) res.json(500, err);
+			else res.json(card);
+		})
+	} else {
+		cards.find({"index": req.params.index}, function (err, card){
+			if(err) res.json(500, err);
+			else res.json(card);
+		});
+	}
+};
+
