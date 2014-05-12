@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		'clean', 
 		'html2js', 
 		'jshint', 
-		'sass',
+		'sass:dev',
 		'concat:build_css',
 		'copy:build_app_assets', 
 		'copy:build_vendor_assets',

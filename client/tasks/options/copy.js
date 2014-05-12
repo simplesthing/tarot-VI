@@ -43,7 +43,7 @@ module.exports = {
 	compile_assets: {
 		files: [
 		  {
-		    src: [ '**' ],
+		    src: [ '**', '!main.css', '!*.map' ],
 		    dest: '<%= compile_dir %>/assets',
 		    cwd: '<%= build_dir %>/assets',
 		    expand: true
