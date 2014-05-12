@@ -17,7 +17,8 @@ module.exports = {
 	},
 	sass: {
 		files: ['<%= app_files.src%>/**/*.scss'],
-		tasks: ['sass']
+		tasks: ['sass'],
+
 	},
 	/**
 	* When assets are changed, copy them. Note that this will *not* copy new
