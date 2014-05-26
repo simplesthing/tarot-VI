@@ -1,0 +1,98 @@
+//Topnav module
+
+// Import custom extends and mixins
+// -----------------------------------------------------------------------
+@import 'mixins';
+
+
+// Module styles
+// -----------------------------------------------------------------------
+
+
+/* Extra small devices (phones, less than 768px) */
+
+/* No media query since this is the default in Bootstrap */
+#topnav {
+  position: relative;
+  top:0;
+  left:0; 
+  border-bottom: 1px solid lighten($brand-primary, 70%);
+
+}
+
+#slide-nav {
+  height:24px;
+  width:24px;
+  margin: 4px 5px;
+  float:left;
+
+  span {
+    display:block;
+    width: 18px;
+    height:3px;
+    background: $brand-primary;
+    border-radius: $border-radius-base;
+    margin: 2px auto;
+  }
+
+  &:hover {
+     span { 
+        background: $link-hover-color; 
+      }
+      cursor: pointer;
+    }
+}
+
+.logo {
+  font-family: $lobster;
+  font-size:18px;
+  line-height: 18px;
+  margin: 4px 4px;
+
+  a {
+    text-decoration: none;
+  }
+}
+.github {
+    display:block;
+    width: 24px;
+    height:24px;
+    margin:4px;
+    background: url();
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .github {
+    @include github(32px, $github-sm-img);
+  }
+  .logo {
+    font-size:24px;
+    line-height: 20px;
+    margin: 5px 5px;
+  }
+  #slide-nav {
+    height:32px;
+    width:32px;
+    margin: 4px 10px;
+
+    span {
+      width: 24px;
+      height:4px;
+      margin: 3px auto;
+    }
+
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) { 
+
+}
+
+

@@ -24,7 +24,7 @@ module.exports = {
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
     html: [ 'src/index.html', 'src/404.html' ],
-    sass: 'src/sass/main.scss',
+    sass: ['src/sass/main.scss', 'src/app/**/*.scss'],
     src: 'src'
   },
   /**

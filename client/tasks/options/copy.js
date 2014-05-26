@@ -9,6 +9,16 @@ module.exports = {
 	      }
 	   ]   
 	},
+	build_app_img_assets: {
+		files: [
+	      { 
+	        src: ['src/app/topnav/images/*.png'],
+	        dest: '<%= build_dir %>/assets/images/topnav/',
+	        expand: true,
+	        flatten: true
+	      }
+	   ]   
+	},
 	build_vendor_assets: {
 		files: [
 		  { 

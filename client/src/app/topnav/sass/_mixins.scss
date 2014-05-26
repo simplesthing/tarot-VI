@@ -1,0 +1,14 @@
+$img_dir: "../images/topnav";
+
+// Variables
+$github-xs-img: "images/topnav/GitHub-Mark-24px.png";
+$github-sm-img: "images/topnav/GitHub-Mark-32.png";
+
+@mixin github($size, $img) {
+	display:block;
+    width: $size;
+    height:$size;
+    margin:4px;
+    background: url(unquote($img));
+}
+

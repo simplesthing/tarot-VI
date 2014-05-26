@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
    <title ng-bind="pageTitle"></title>
-
+    <meta name="viewport" content="user-scalable=no">
   <!-- social media tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@simplesthing">
@@ -22,14 +22,30 @@
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
-
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Marvel:400,700' rel='stylesheet' type='text/css'>
+    
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
     
 </head>
 <body>
-    <h1>&#x2665;</h1>
+    <div id="topnav" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div id="slide-nav"><span></span><span></span><span></span></div>
+                <div>
+                    <p class="logo"><a href="">Simplesthing</a></p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
+                    <a href="https://github.com/simplesthing" class="github pull-right"></a>
+                <div class="pull-right twitter"></div>
+            </div>
+        </div>
+    </div> 
     <div class="container" ui-view="main"></div>
+
     <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>

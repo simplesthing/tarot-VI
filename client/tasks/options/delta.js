@@ -26,9 +26,10 @@ module.exports = {
 	*/
 	assets: {
 		files: [ 
-		  'src/assets/**/*'
+		  'src/assets/**/*',
+		  'src/app/**/images/*'
 		],
-		tasks: [ 'copy:build_assets' ]
+		tasks: [ 'copy:build_app_assets', 'copy_build_app_img_assets']
 	},
 	/**
 	* When index.html changes, we need to compile it.
