@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	*/
 	grunt.registerTask('build', [
 		'clean', 
+		'ngconstant:development',
 		'html2js', 
 		'jshint', 
 		'sass:dev',

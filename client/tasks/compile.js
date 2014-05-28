@@ -7,6 +7,7 @@ module.exports = function (grunt){
 		'copy:compile_assets',
 		'cssmin', 
 		'ngAnnotate',
+		'ngconstant:production',
 		'concat:compile_js', 
 		'uglify', 
 		'index:compile'
