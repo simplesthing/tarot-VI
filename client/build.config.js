@@ -62,6 +62,9 @@ module.exports = {
     css: [
     ],
     assets: [
+    ],
+    fonts: [
+       'vendor/sass-bootstrap/fonts/*'
     ]
   }
 }

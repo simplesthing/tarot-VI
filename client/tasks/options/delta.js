@@ -13,7 +13,7 @@ module.exports = {
 		files: [
 			'<%= app_files.js %>'
 		],
-		tasks: ['jshint:src']
+		tasks: ['build']
 	},
 	sass: {
 		files: ['<%= app_files.src%>/**/*.scss'],

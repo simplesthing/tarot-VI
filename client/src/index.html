@@ -30,21 +30,8 @@
     
 </head>
 <body>
-    <div id="topnav" class="container-fluid">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6">
-                <div id="slide-nav"><span></span><span></span><span></span></div>
-                <div>
-                    <p class="logo"><a href="">Simplesthing</a></p>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 pull-right">
-                    <a href="https://github.com/simplesthing" class="github pull-right"></a>
-                <div class="pull-right twitter"></div>
-            </div>
-        </div>
-    </div> 
-    <div class="container" ui-view="main"></div>
+    <div topnav-bar ></div>
+    <div class="container view-main" ui-view="main"></div>
 
     <script src="http://localhost:35729/livereload.js"></script>
 </body>

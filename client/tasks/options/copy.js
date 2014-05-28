@@ -16,6 +16,12 @@ module.exports = {
 	        dest: '<%= build_dir %>/assets/images/topnav/',
 	        expand: true,
 	        flatten: true
+	      },
+	      { 
+	        src: ['src/app/login/images/*.png'],
+	        dest: '<%= build_dir %>/assets/images/login/',
+	        expand: true,
+	        flatten: true
 	      }
 	   ]   
 	},
@@ -24,6 +30,13 @@ module.exports = {
 		  { 
 		    src: [ '<%= vendor_files.assets %>' ],
 		    dest: '<%= build_dir %>/assets/',
+		    cwd: '.',
+		    expand: true,
+		    flatten: true
+		  },
+		  { 
+		    src: [ '<%= vendor_files.fonts %>' ],
+		    dest: '<%= build_dir %>/fonts',
 		    cwd: '.',
 		    expand: true,
 		    flatten: true

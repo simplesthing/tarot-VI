@@ -11,8 +11,9 @@
  * The dependencies block here is also where component dependencies should be
  * specified, as shown below.
  */
- angular.module('tarot.home', [
- 	'ui.router'
+ angular.module('home', [
+ 	'ui.router',
+ 	'topnav'
  ]) 
  /**
  * Each section or module of the site can also have its own routes. AngularJS
@@ -24,7 +25,7 @@
 		url: '/home',
 		views: {
 			"main": {
-				controller: 'HomeController',
+				controller: 'HomeCtrl',
 				templateUrl: 'home/home.tpl.html'
 			}
 		},
@@ -32,6 +33,6 @@
 	});
 })
 
-.controller( 'HomeController', function HomeController( $scope ) {
+.controller( 'HomeCtrl', function HomeController( $scope ) {
 
 });
