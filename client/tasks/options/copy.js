@@ -63,6 +63,14 @@ module.exports = {
 		  }
 		]
 	},
+	move_build: {
+		files: [{
+			src: ['**'],
+			dest: '<%= compile_dir %>/',
+			expand: true,
+			cwd: '<%= build_dir %>/',
+		}]
+	},
 	compile_assets: {
 		files: [
 		  {

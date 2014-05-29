@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 		'copy:build_vendorjs', 
 		'index:build', 
 		'karmaconfig',
-		'karma:runonce'
+		'karma:runonce',
+		'copy:move_build'
 	]);
 }; 

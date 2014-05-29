@@ -2,8 +2,8 @@ angular.module('tarot', [
 	'templates-app',
   	'templates-common',
   	'config',
+  	'topnav',
 	'home',
-	'topnav',
 	'ui.router',
 	'ui.bootstrap'
 ])
@@ -11,7 +11,7 @@ angular.module('tarot', [
   $urlRouterProvider.otherwise( '/home' );
 })
 
-.run( function run () {
+.run( function run ($rootScope) {
 })
 
 .constant('AUTH_EVENTS', {

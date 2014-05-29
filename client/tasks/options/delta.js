@@ -36,7 +36,7 @@ module.exports = {
 	*/
 	html: {
 		files: [ '<%= app_files.html %>' ],
-		tasks: [ 'index:build' ]
+		tasks: [ 'index:build']
 	},
 	/**
 	* When our templates change, we only rewrite the template cache.
@@ -46,7 +46,7 @@ module.exports = {
 		  '<%= app_files.atpl %>', 
 		  '<%= app_files.ctpl %>'
 		],
-		tasks: [ 'html2js' ]
+		tasks: [ 'html2js', 'copy:move_build' ]
 	},
 	 /**
        * When a JavaScript unit test file changes, we only want to lint it and

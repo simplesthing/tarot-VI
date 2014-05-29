@@ -46,7 +46,7 @@ module.exports = function (grunt){
   * does a clean buid before watching for changes.
   */
   grunt.renameTask( 'watch', 'delta' );
-  grunt.registerTask('watch', ['build','delta']);
+  grunt.registerTask('watch', ['build', 'delta']);
 
 	// Default Task
   // ------------------
