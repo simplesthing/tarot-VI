@@ -18,8 +18,18 @@ module.exports = {
 	        flatten: true
 	      },
 	      { 
-	        src: ['src/app/login/images/*.png'],
-	        dest: '<%= build_dir %>/assets/images/login/',
+	        src: ['src/app/user/smiley/images/*.png'],
+	        dest: '<%= build_dir %>/assets/images/smiley/',
+	        expand: true,
+	        flatten: true
+	      }
+	   ]   
+	},
+	build_app_svg_assets: {
+		files: [
+	      { 
+	        src: ['src/app/user/smiley/svg/smiley.svg'],
+	        dest: '<%= build_dir %>/assets/svg/smiley',
 	        expand: true,
 	        flatten: true
 	      }
@@ -36,7 +46,7 @@ module.exports = {
 		  },
 		  { 
 		    src: [ '<%= vendor_files.fonts %>' ],
-		    dest: '<%= build_dir %>/fonts',
+		    dest: '<%= build_dir %>/assets/fonts',
 		    cwd: '.',
 		    expand: true,
 		    flatten: true
@@ -56,7 +66,7 @@ module.exports = {
 	build_vendorjs: {
 		files: [
 		  {
-		    src: [ '<%= vendor_files.js %>' ],
+		    src: [ '<%= vendor_files.js %>'],
 		    dest: '<%= build_dir %>/',
 		    cwd: '.',
 		    expand: true

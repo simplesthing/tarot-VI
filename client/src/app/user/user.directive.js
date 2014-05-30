@@ -1,21 +1,32 @@
 angular.module('user.directive', [])
 
-.directive('login', function ( $modal ){
+.directive('login', function ( $modal, $rootScope ){
 	return {
 		restrict: 'A',
-		template: '<span class="user unknown"></span>',
+		template: '<span class="si-icon si-icon-smiley si-icon-reverse user" data-icon-name="smiley"></span>',
+		replace: true,
 		link: function (scope, elem, attr){
+
+			var smiley = new SvgIcon( document.querySelector('.si-icon-smiley'), svgIconConfig, { evtoggle: 'svgEvent', size : { w : 32, h : 32 }});
+
+			$rootScope.$on('svgEvent', function (){
+				smiley.toggle(true);
+				smiley.options.onToggle();
+			});
 
 			elem.bind('click', function (){
 				var modal = $modal.open({
 					templateUrl: 'user/login-form.tpl.html',
 					size: 'sm',
-					controller : function ($scope, $rootScope, AUTH_EVENTS, AuthService){
+					windowClass: 'login-modal',
+					controller : function ($scope, $rootScope, AUTH_EVENTS, AuthService, $modalInstance){
 						$scope.credentials = {};
 	
 						$scope.login = function (){
 							AuthService.login($scope.credentials).then(function (){
 								$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+								$modalInstance.close();
+								$scope.$emit('svgEvent');
 							}, function (){
 								$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
 							});

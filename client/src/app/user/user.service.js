@@ -7,6 +7,8 @@ angular.module('user.service', [])
 				.post(ENV.apiEndpoint + 'api/login', credentials)
 				.then(function (res){
 					console.log(res);
+					// res.data = {name:"name", role: "role"}
+					
 			});
 		}
 	};

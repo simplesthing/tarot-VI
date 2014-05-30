@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 		'sass:dev',
 		'concat:build_css',
 		'copy:build_app_assets', 
+		'copy:build_app_svg_assets',
 		'copy:build_app_img_assets', 
 		'copy:build_vendor_assets',
 		'copy:build_appjs', 

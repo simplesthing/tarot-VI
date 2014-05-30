@@ -1,28 +1,20 @@
-<div class="modal-body modal-login" >
+<div class="modal-body" >
 	<form name="loginForm" class="form-horizontal" role="form" simple-submit="login()" novalidate>
 
 	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.name)}">
-		<div class="col-sm-2 control-label">
-			<label for="email">Email</label>
-		</div>
-		<div class="col-sm-10">
 			<input type="text" name="name" ng-model="credentials.name" class="form-control inline" placeholder="Username" required>
-		</div>
 	</div>
 
 	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.password)}">
-		<div class="col-sm-2 control-label">
-			<label for="password">Password</label>
-		</div>
-		<div class="col-sm-10">
 			<input class="form-control" name="password" type="password" 
          placeholder="Password"  ng-model="credentials.password" required/>
-		</div>
 	</div>
 
 	<div class="form-group">
 		<div class="col-sm-12 clearfix">
-			<button type="submit" class="btn btn-default pull-right" >Login</button>
+			<button type="submit" class="btn btn-primary pull-right" >Login</button>
+			<input type="button" value="Register" class="btn btn-default pull-right">
+			<a href="" class="pull-right password-help">Need Help?</a>
 		</div>
 	</div>
 </form>

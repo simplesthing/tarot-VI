@@ -53,10 +53,7 @@
     text-decoration: none;
   }
 }
-.user {
-  @include social_link(32px, "images/topnav/user-unknown-32.png");
-  cursor: pointer;
-}
+
 .github {
   @include social_link(24px, $github-xs-img);
 }

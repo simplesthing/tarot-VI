@@ -1,0 +1,38 @@
+//Login module
+
+// Import custom extends and mixins
+// -----------------------------------------------------------------------
+
+// Module styles
+// -----------------------------------------------------------------------
+
+.login-modal {
+	.modal-dialog {
+		width: 400px;
+	}
+	.form-horizontal .form-group {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.btn {
+		margin-left: 12px;
+	}
+	.password-help {
+		margin: 12px;
+	}
+} 
+.user {
+	display: block;
+	margin:4px 8px 4px 4px;
+}
+.si-icons span {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin: 4px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.no-svg .si-icon-smiley { background-image: url('images/smiley/smiley.png') }

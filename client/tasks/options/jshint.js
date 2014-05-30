@@ -1,6 +1,6 @@
 module.exports = {
 	src: [
-		'<%= app_files.js %>'
+		'<%= app_files.js %>', '!src/app/user/smiley/*.js'
 	],
 	gruntfile: [
 		'Gruntfile.js'
