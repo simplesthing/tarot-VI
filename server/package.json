@@ -18,13 +18,20 @@
   },
   "devDependencies": {
     "body-parser": "~1.0.0",
+    "connect-mongo": "~0.4.1",
     "cookie-parser": "~1.0.1",
+    "crypto": "0.0.3",
     "debug": "~0.7.4",
     "errorhandler": "~1.0.1",
     "express": "~4.0.0",
+    "express-session": "~1.2.1",
+    "forever": "~0.11.1",
     "mongodb": "~1.4.3",
+    "mongoose": "~3.8.12",
     "monk": "~0.9.0",
     "morgan": "~1.0.0",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
     "static-favicon": "~1.0.0"
   }
 }
