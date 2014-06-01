@@ -58,6 +58,9 @@ module.exports = {
       'vendor/angular/angular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
+      'vendor/angular-resource/angular-resource.js',
+      'vendor/angular-http-auth/src/http-auth-interceptor.js',
+      'vendor/angular-cookies/angular-cookies.js',
       'vendor/modernizr/modernizr.js',
       'vendor/snap.svg/dist/snap.svg.js'
     ],

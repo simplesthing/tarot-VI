@@ -4,6 +4,9 @@ angular.module('tarot', [
   	'config',
   	'topnav',
 	'home',
+	'ngResource',
+	'ngCookies',
+	'http-auth-interceptor',
 	'ui.router',
 	'ui.bootstrap'
 ])
@@ -11,25 +14,17 @@ angular.module('tarot', [
   $urlRouterProvider.otherwise( '/home' );
 })
 
-.run( function run ($rootScope) {
+.run( function run ($rootScope, $location, Auth, $cookieStore) {
+
+	Auth.currentUser().then(function (){
+		if($rootScope.currentUser._id !== 0) {
+			$rootScope.$broadcast('user-authorized');
+		} 
+   });
+
 })
 
-.constant('AUTH_EVENTS', {
-	loginSuccess: 'auth-login-success',
-	loginFailed: 'auth-login-failed',
-	logoutSuccess: 'auth-logout-success',
-	sessionTimeout: 'auth-session-timeout',
-	notAuthenticated: 'auth-not-authenticated',
-	notAuthorized: 'auth-not-authorized'
-})
-
-.constant('USER_ROLES', {
-	all: '*',
-	admin: 'admin',
-	user: 'user'
-})
-
-.controller ('AppController', function AppController ($scope, $location) {
+.controller ('AppController', function AppController ($scope, $rootScope, $location, Auth) {
 
 	$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromParams){
 		if(angular.isDefined(toState.data.pageTitle)) {

@@ -119,7 +119,7 @@
 		var self = this;
 		for( var i = 0, len = this.config.animation.length; i < len; ++i ) {
 			var a = this.config.animation[ i ],
-				el = this.svg.select( a.el ),
+				el = this.svg.select( a.el ) ,
 				animProp = this.toggled ? a.animProperties.from : a.animProperties.to,
 				val = animProp.val, 
 				timeout = motion && animProp.delayFactor ? animProp.delayFactor : 0;
@@ -128,20 +128,22 @@
 				el.attr( JSON.parse( animProp.before ) );
 			}
 
-			if( motion ) {
-				setTimeout(function( el, val, animProp ) { 
-					return function() { el.animate( JSON.parse( val ), self.options.speed, self.options.easing, function() {
-						if( animProp.after ) {
-							this.attr( JSON.parse( animProp.after ) );
-						}
-						if( animProp.animAfter ) {
-							this.animate( JSON.parse( animProp.animAfter ), self.options.speed, self.options.easing );
-						}
-					} ); }; 
-				}( el, val, animProp ), timeout * self.options.speed );
-			}
-			else {
-				el.attr( JSON.parse( val ) );
+			if(el) {
+				if( motion ) {
+					setTimeout(function( el, val, animProp ) { 
+						return function() { el.animate( JSON.parse( val ), self.options.speed, self.options.easing, function() {
+							if( animProp.after ) {
+								this.attr( JSON.parse( animProp.after ) );
+							}
+							if( animProp.animAfter ) {
+								this.animate( JSON.parse( animProp.animAfter ), self.options.speed, self.options.easing );
+							}
+						} ); }; 
+					}( el, val, animProp ), timeout * self.options.speed );
+				}
+				else {
+					el.attr( JSON.parse( val ) );
+				}
 			}
 				
 		}

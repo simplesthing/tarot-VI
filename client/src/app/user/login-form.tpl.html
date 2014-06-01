@@ -1,8 +1,8 @@
 <div class="modal-body" >
 	<form name="loginForm" class="form-horizontal" role="form" simple-submit="login()" novalidate>
-
+	
 	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.name)}">
-			<input type="text" name="name" ng-model="credentials.name" class="form-control inline" placeholder="Username" required>
+			<input type="text" name="email" ng-model="credentials.email" class="form-control inline" placeholder="Email" required>
 	</div>
 
 	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.password)}">

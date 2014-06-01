@@ -1,12 +1,11 @@
 angular.module('user.directive', [])
 
-.directive('login', function ( $modal, $rootScope ){
+.directive('login', function ( $modal, $rootScope, Auth ){
 	return {
 		restrict: 'A',
 		template: '<span class="si-icon si-icon-smiley si-icon-reverse user" data-icon-name="smiley"></span>',
 		replace: true,
 		link: function (scope, elem, attr){
-
 			var smiley = new SvgIcon( document.querySelector('.si-icon-smiley'), svgIconConfig, { evtoggle: 'svgEvent', size : { w : 32, h : 32 }});
 
 			$rootScope.$on('svgEvent', function (){
@@ -14,21 +13,50 @@ angular.module('user.directive', [])
 				smiley.options.onToggle();
 			});
 
+			$rootScope.$on('user-authorized', function (){
+				scope.$emit('svgEvent');
+			});
+
+
 			elem.bind('click', function (){
 				var modal = $modal.open({
 					templateUrl: 'user/login-form.tpl.html',
 					size: 'sm',
 					windowClass: 'login-modal',
-					controller : function ($scope, $rootScope, AUTH_EVENTS, AuthService, $modalInstance){
+					controller : function ($scope, Auth, $modalInstance, $location){
 						$scope.credentials = {};
-	
+
+
 						$scope.login = function (){
-							AuthService.login($scope.credentials).then(function (){
-								$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-								$modalInstance.close();
-								$scope.$emit('svgEvent');
-							}, function (){
-								$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+
+							Auth.login('password', {
+								'email': $scope.credentials.email,
+								'password': $scope.credentials.password
+							}, function (err){
+								$scope.errors = {};
+
+								if(!err) {
+									$modalInstance.close();
+									$scope.$emit('svgEvent');
+								} else {
+									console.log(err);
+								}
+							});
+						};
+
+
+						$scope.register = function (){
+							Auth.createUser({
+								email: $scope.credentials.email,
+          						username: $scope.credentials.username,
+          						password: $scope.credentials.password
+							}, function (err){
+								if(!err) {
+									// $location.path('/');
+									$modalInstance.close();
+								} else {
+									console.log(err);
+								}
 							});
 						};
 					}

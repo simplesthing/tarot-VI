@@ -21,6 +21,9 @@
     "angular-ui-router": "~0.2.10",
     "angular-ui-utils": "~0.1.1",
     "sass-bootstrap": "~3.0.2",
-    "modernizr": "~2.8.2"
+    "modernizr": "~2.8.2",
+    "angular-resource": "~1.2.16",
+    "angular-cookies": "~1.2.16",
+    "angular-http-auth": "~1.2.1"
   }
 }
