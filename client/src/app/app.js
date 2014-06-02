@@ -8,17 +8,19 @@ angular.module('tarot', [
 	'ngCookies',
 	'http-auth-interceptor',
 	'ui.router',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'events'
 ])
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
   $urlRouterProvider.otherwise( '/home' );
 })
 
-.run( function run ($rootScope, $location, Auth, $cookieStore) {
+.run( function run ($rootScope, $location, Auth, $cookieStore, EventService) {
 
 	Auth.currentUser().then(function (){
 		if($rootScope.currentUser._id !== 0) {
-			$rootScope.$broadcast('user-authorized');
+			// $rootScope.$broadcast('user-authorized');
+			EventService.publish('user-authorized', {});
 		} 
    });
 

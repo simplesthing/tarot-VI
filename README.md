@@ -1,11 +1,11 @@
 tarot-VI
 ========
 
-The purpose of this project is to build the tarot app without scaffolding in order to learn all the bits from the ground up. Naturally there is a good amount of open source code copying, but it has been done with the sole intent of learning the functionality.
+The purpose of this project is to build the tarot app without scaffolding in order to learn all the bits from the ground up. Naturally there is a good amount of open source code lifting, it should be obvious that I am learning as I go, and giving credit when I do.
 
-The client portion of the app is based on [ngBolierplate](http://joshdmiller.github.io/ng-boilerplate/#/home). It includes Grunt task runner, Bower front end package manager, karma for unit tests, Protractor for end to end tests, node based SASS compilation. SVG animated icons is based on demo from [codrops](http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/).
+The client portion of the app is based on [ngBolierplate](http://joshdmiller.github.io/ng-boilerplate/#/home). It includes Grunt task runner, Bower front end package manager, karma for unit tests, Protractor for end to end tests, with node based SASS compilation. The SVG animated smiley icon is based on demo from [codrops](http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/).
 
-The server portion of the app is used for the API and to serve compiled static client code. There was no boilerplate and it is rough as it is my first node application, it should be obvious that I am learning as I go. Authentication code is based on [angular-passport](https://github.com/DaftMonk/angular-passport), and currently still very much a work in progress.
+The server portion of the app is used for User authentication, game API and to serve compiled static client code. Authentication code is based on [angular-passport](https://github.com/DaftMonk/angular-passport), and currently still very much a work in progress.
 
 ## Client Code Quick Start
 

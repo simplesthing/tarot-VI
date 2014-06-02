@@ -1,21 +1,60 @@
-<div class="modal-body" >
-	<form name="loginForm" class="form-horizontal" role="form" simple-submit="login()" novalidate>
-	
-	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.name)}">
-			<input type="text" name="email" ng-model="credentials.email" class="form-control inline" placeholder="Email" required>
+<div class="modal-body">
+<!-- <p>User  {{user}}</p> -->
+	<div ng-show="getState('login')">
+		<form name="loginForm" class="form-horizontal" role="form" simple-submit="login(user)" novalidate>
+		
+			<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.email)}">
+				<input type="text" name="email" ng-model="user.email" class="form-control inline" placeholder="Email" required>
+			</div>
+
+			<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.password)}">
+				<input class="form-control" name="password" type="password" 
+		         placeholder="Password"  ng-model="user.password" required/>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-12 clearfix">
+					<button type="submit" class="btn btn-primary pull-right" >Login</button>
+					<input type="button" value="Register" class="btn btn-default pull-right" ng-click="register()">
+					<a href="" class="pull-right password-help">Forgot Password</a>
+				</div>
+			</div>
+
+		</form>
 	</div>
 
-	<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.password)}">
-			<input class="form-control" name="password" type="password" 
-         placeholder="Password"  ng-model="credentials.password" required/>
+	<div ng-show="getState('logout')">
+		<form name="logoutForm" role="form" ng-submit="logout()">
+			<button class="btn btn-primary">Logout</button>
+		</form>
+	</div>		
+
+	<div ng-show="getState('register')">
+		<form name="registerForm" role="form" class="form-horizontal"  simple-submit="createUser(user)" novalidate>
+			
+			<div class="form-group" ng-class="{'has-error': simple.registerForm.needsAttention(registerForm.email)}">
+				<input type="text" name="email" ng-model="user.email" class="form-control inline" placeholder="Email" required>
+			</div>
+
+			<div class="form-group" ng-class="{'has-error': simple.registerForm.needsAttention(registerForm.username)}">
+				<input type="text" name="username" ng-model="user.username" class="form-control inline" placeholder="Username" required>
+			</div>
+
+			<div class="form-group" ng-class="{'has-error': simple.loginForm.needsAttention(loginForm.password)}">
+				<input class="form-control" name="password" type="password" 
+		         placeholder="Password"  ng-model="user.password" required/>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-12 clearfix">
+					<button type="submit" class="btn btn-primary pull-right" >Register</button>
+					<a href="" class="pull-right password-help" ng-click="back()">Login</a>
+				</div>
+			</div>
+
+		</form>
 	</div>
 
-	<div class="form-group">
-		<div class="col-sm-12 clearfix">
-			<button type="submit" class="btn btn-primary pull-right" >Login</button>
-			<input type="button" value="Register" class="btn btn-default pull-right">
-			<a href="" class="pull-right password-help">Need Help?</a>
-		</div>
-	</div>
-</form>
+
+
 </div>
