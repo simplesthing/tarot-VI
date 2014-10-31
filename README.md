@@ -1,7 +1,7 @@
 tarot-VI
 ========
 
-The purpose of this project is to build the tarot app without scaffolding in order to learn all the bits from the ground up. Naturally there is a good amount of open source code lifting, it should be obvious that I am learning as I go, and giving credit when I do.
+The purpose of this project is to build the tarot app without scaffolding in order to learn all the bits from the ground up. Naturally there is a good amount of open source code, it should be obvious that I am learning as I go, and giving credit when I do.
 
 The client portion of the app is based on [ngBolierplate](http://joshdmiller.github.io/ng-boilerplate/#/home). It includes Grunt task runner, Bower front end package manager, karma for unit tests, Protractor for end to end tests, with node based SASS compilation. The SVG animated smiley icon is based on demo from [codrops](http://tympanus.net/codrops/2013/11/05/animated-svg-icons-with-snap-svg/).
 
@@ -32,6 +32,11 @@ grunt e2e
 ```sh
 $ cd tarot-VI/server
 $ npm install
+$ brew instal mongodb
+$ mkdir /data/db
+$ sudo chown -R <you> /data
+$ mongod
+$ generate a cert
 $ forever start app.js
 ```
 
